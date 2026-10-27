@@ -24,6 +24,18 @@ const movies = [
     description: 'Two kite-makers from rival families in Jaipur fall in love during the week of the kite festival. DEMO MOVIE.' },
   { name: 'The Hollow Orchard', slug: 'the-hollow-orchard', genres: ['Horror', 'Mystery'], language: 'English', certificate: 'A', duration: 104, releaseDate: '2026-10-02',
     description: 'A family inherits an orchard where the trees only bear fruit after dark. DEMO MOVIE.' },
+  { name: 'Neelesh: Before Sunrise', slug: 'before-sunrise', genres: ['Drama', 'Romance'], language: 'Hindi', certificate: 'U', duration: 118, releaseDate: '2026-10-09',
+    description: 'A chance meeting at a railway café changes the plans of two strangers, one final night before their separate futures begin. DEMO MOVIE.' },
+  { name: 'Glass City', slug: 'glass-city', genres: ['Thriller', 'Crime'], language: 'Hindi', certificate: 'A', duration: 126, releaseDate: '2026-10-16',
+    description: 'An architect discovers that the skyline she helped design hides a conspiracy beneath its polished glass towers. DEMO MOVIE.' },
+  { name: 'Monsoon Notes', slug: 'monsoon-notes', genres: ['Music', 'Drama'], language: 'English', certificate: 'U/A', duration: 112, releaseDate: '2026-10-23',
+    description: 'A fading pianist returns home to record the sounds of a monsoon and finds a new melody in its old streets. DEMO MOVIE.' },
+  { name: 'Crimson Express', slug: 'crimson-express', genres: ['Action', 'Adventure'], language: 'English', certificate: 'U/A', duration: 139, releaseDate: '2026-11-06',
+    description: 'A midnight train races across a stormy border while its passengers uncover a secret worth crossing countries for. DEMO MOVIE.' },
+  { name: 'The Silent Forest', slug: 'silent-forest', genres: ['Horror', 'Thriller'], language: 'Tamil', certificate: 'A', duration: 107, releaseDate: '2026-11-13',
+    description: 'When every bird suddenly disappears, a ranger enters the forest to find out what the trees have been hiding. DEMO MOVIE.' },
+  { name: 'Starlight Diner', slug: 'starlight-diner', genres: ['Comedy', 'Fantasy'], language: 'Hindi', certificate: 'U', duration: 114, releaseDate: '2026-11-20',
+    description: 'At a roadside diner that opens only after midnight, ordinary customers receive extraordinary second chances. DEMO MOVIE.' },
 ];
 
 const theatres = [

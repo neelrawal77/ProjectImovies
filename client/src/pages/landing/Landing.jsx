@@ -1,5 +1,6 @@
 import { Link, Navigate } from 'react-router-dom';
 import { Container, Button } from 'react-bootstrap';
+import { FiArrowRight, FiCalendar, FiFilm, FiMapPin, FiPlay } from 'react-icons/fi';
 import { useAuth } from '../../context/AuthContext.jsx';
 
 export default function Landing() {
@@ -7,32 +8,31 @@ export default function Landing() {
   if (!loading && user) return <Navigate to={user.role === 'admin' ? '/admin' : '/home'} replace />;
 
   return (
-    <section className="im-hero">
-      <Container>
-        <div className="im-ticket">
-          <div className="im-ticket-main">
-            <h1>Welcome to iMovies</h1>
-            <p className="im-tagline">Movie Ticket Booking Made Simple</p>
-            <p className="im-lead">Pick a film, choose your theatre and showtime, tap your seats, and your tickets are ready. It takes about a minute.</p>
-            <div className="d-flex flex-wrap gap-2">
-              <Button as={Link} to="/register" variant="danger" size="lg">Create an account</Button>
-              <Button as={Link} to="/login" variant="outline-light" size="lg">Log in</Button>
-              <Button as={Link} to="/movies" variant="link" size="lg" className="text-light">Browse movies</Button>
+    <>
+      <section className="im-cinema-hero">
+        <div className="im-cinema-backdrop" aria-hidden="true" />
+        <Container className="im-cinema-content">
+          <div className="im-cinema-copy">
+            <span className="im-hero-kicker"><FiFilm /> Now showing</span>
+            <h1>Every great movie deserves the perfect seat.</h1>
+            <p>Discover what is playing, choose your theatre, and book in a few taps.</p>
+            <div className="im-hero-actions">
+              <Button as={Link} to="/movies" variant="danger" size="lg"><FiPlay /> Explore movies</Button>
+              <Button as={Link} to="/register" variant="light" size="lg">Get started <FiArrowRight /></Button>
             </div>
           </div>
-          <div className="im-ticket-stub" aria-hidden="true">
-            <span>ADMIT</span>
-            <strong>ONE</strong>
-            <span>demo ticket</span>
+        </Container>
+      </section>
+
+      <section className="im-booking-flow">
+        <Container>
+          <div className="im-flow-grid">
+            <div><span>01</span><FiFilm /><strong>Find a movie</strong><p>Browse this week's biggest releases.</p></div>
+            <div><span>02</span><FiMapPin /><strong>Pick a theatre</strong><p>Choose your city, cinema and showtime.</p></div>
+            <div><span>03</span><FiCalendar /><strong>Book your seats</strong><p>Select seats and confirm instantly.</p></div>
           </div>
-        </div>
-        <ul className="im-steps">
-          <li><strong>Choose</strong> a movie from the catalogue</li>
-          <li><strong>Pick</strong> a theatre and showtime</li>
-          <li><strong>Select</strong> your seats on the live seat map</li>
-          <li><strong>Confirm</strong> with a free demo payment</li>
-        </ul>
-      </Container>
-    </section>
+        </Container>
+      </section>
+    </>
   );
 }

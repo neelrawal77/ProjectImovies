@@ -1,6 +1,6 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
-import { FiFilm, FiLogOut } from 'react-icons/fi';
+import { FiFilm, FiLogOut, FiUser } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 import { useAuth } from '../../context/AuthContext.jsx';
 
@@ -32,7 +32,7 @@ export default function Header() {
           <Nav className="align-items-lg-center gap-2">
             {user ? (
               <>
-                <span className="im-hello">{user.username}{isAdmin && <em> · admin</em>}</span>
+                <span className="im-hello"><FiUser /> {user.username}{isAdmin && <em> · admin</em>}</span>
                 <Button variant="outline-light" size="sm" onClick={handleLogout}><FiLogOut /> Log out</Button>
               </>
             ) : (
